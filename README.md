@@ -10,11 +10,13 @@ Use one of the two classes provided:
 
 This class can read lines of a file, just in the same way as BufferedReader, but avoiding security problems.
 
-While BufferedReader.readLine reads all the characters of the file until it finds a line feed character, BoundedBufferdReader reads until it finds a line feed character or it reaches the  maximum amount of bytes specified.
+While `BufferedReader.readLine` reads all the characters of the file until it finds a line feed character, `BoundedBufferdReader.readLine` reads until it finds a line feed character or it reaches the  maximum amount of bytes specified.
 
 Each time it found a line end character, it resets the bytes read so the next line can read the maximum amount of bytes allowed.
 
-This class prevents DoS attacks as well as out of memory errors
+So it can read lines in the same way as traditional `BufferedReader` while the target file doesn't have lines longer than the maximum bytes specified in the constructor.
+
+This class prevents DoS attacks as well as out of memory errors.
 
 ## BoundedInputStream
 
